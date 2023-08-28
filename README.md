@@ -6,6 +6,20 @@ Nodejs version 18.16.1
 
 npm 9.8.1
 
+## Lancement application
+
+```shell
+ng build
+```
+
+Le dossier dist contient toute l'application en fichiers compilés. On va utiliser ce dossier pour héberger notre application en production ou en recette.
+
+## Outillage
+
+Yarn version 1.22.19
+
+Compodoc version 1.1.21
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
