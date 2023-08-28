@@ -1,7 +1,9 @@
 # TaskManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+
 Nodejs version 18.16.1
+
 npm 9.8.1
 
 ## Development server
