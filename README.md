@@ -20,6 +20,25 @@ Yarn version 1.22.19
 
 Compodoc version 1.1.21
 
+## Observable HTTP request
+
+```js
+getTasks(term: string): Observable<Task[]> {
+  let apiURL = 'https://domain.data?param=test';
+  return this.http.get(apiURL)
+      .map(res => {
+        return res.json().results.map(item => {
+          return new Task(
+              item.titre,
+              item.description,
+              item.status,
+              item.createdAt,
+          );
+        });
+      });
+}
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

@@ -1,9 +1,10 @@
+import { Observable } from 'rxjs';
 import { Task } from './tasks/model/task';
 
 
 export interface CRUDTaskListServiceInterface {
 
-  tasks: Task[];
+  tasks: Observable<Task[]>;
 
-  getTaskList(): Task[];
+  getTaskList(): Observable<Task[]>;
 }

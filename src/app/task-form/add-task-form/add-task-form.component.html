@@ -1,0 +1,29 @@
+<section>
+  <h2>Add Task</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="titre">Titre</label>
+      <input type="text" id="titre" formControlName="titre" />
+      <div *ngIf="form.controls['titre'].invalid && (form.controls['titre'].dirty || form.controls['titre'].touched)" class="alert">
+        <div *ngIf="form.controls['titre'].errors?.['required']">
+          Le champs est obligatoire.
+        </div>
+        <app-error-min-length-field-form [input]="form.controls['titre']" name="titre"></app-error-min-length-field-form>
+        <app-error-max-length-field-form [input]="form.controls['titre']" name="titre"></app-error-max-length-field-form>
+      </div>
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+    <div>
+      <label for="status">Status</label>
+      <select id="status" formControlName="status">
+        <option *ngFor="let statut of status" value="{{statut}}">{{statut}}</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit" [disabled]="!form.valid">Add</button>
+    </div>
+  </form>
+</section>

@@ -8,12 +8,12 @@ import { TaskRepositoryService } from 'src/app/task-repository.service';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent {
-  taskList: Task[];
+  taskList: Task[] = [];
   archivedTaskList: Task[] = [];
   constructor(
     private taskRepositoryService: TaskRepositoryService,
     ) {
-    this.taskList = taskRepositoryService.getTasks();
-    this.archivedTaskList = taskRepositoryService.getTasks(Status.TERMINEE);
+    taskRepositoryService.getTasks().subscribe(data => this.taskList = data);
+    taskRepositoryService.getTasks(Status.TERMINEE).subscribe(data => this.archivedTaskList = data);
   }
 }

@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRouti
 
 import { AppComponent } from './app.component';
 import { TasksModule } from './tasks/tasks.module';
-
+import { AddTaskFormModule } from './task-form/add-task-form.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { TasksModule } from './tasks/tasks.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TasksModule
+    TasksModule,
+    AddTaskFormModule
   ],
   exports: [
     TasksModule
