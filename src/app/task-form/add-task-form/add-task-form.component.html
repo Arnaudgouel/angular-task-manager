@@ -5,9 +5,7 @@
       <label for="titre">Titre</label>
       <input type="text" id="titre" formControlName="titre" />
       <div *ngIf="form.controls['titre'].invalid && (form.controls['titre'].dirty || form.controls['titre'].touched)" class="alert">
-        <div *ngIf="form.controls['titre'].errors?.['required']">
-          Le champs est obligatoire.
-        </div>
+        <app-error-required-field-form [input]="form.controls['titre']" name="titre"></app-error-required-field-form>
         <app-error-min-length-field-form [input]="form.controls['titre']" name="titre"></app-error-min-length-field-form>
         <app-error-max-length-field-form [input]="form.controls['titre']" name="titre"></app-error-max-length-field-form>
       </div>
@@ -15,6 +13,10 @@
     <div>
       <label for="description">Description</label>
       <textarea id="description" formControlName="description"></textarea>
+      <div *ngIf="form.controls['description'].invalid && (form.controls['description'].dirty || form.controls['description'].touched)" class="alert">
+        <app-error-min-length-field-form [input]="form.controls['description']" name="description"></app-error-min-length-field-form>
+        <app-error-max-length-field-form [input]="form.controls['description']" name="description"></app-error-max-length-field-form>
+      </div>
     </div>
     <div>
       <label for="status">Status</label>

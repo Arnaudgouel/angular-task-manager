@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MainAddTaskFormComponent } from './main-add-task-form/main-add-task-form.component';
 import { ErrorMinLengthFieldFormComponent } from '../error-min-length-field-form/error-min-length-field-form.component';
 import { ErrorMaxLengthFieldFormComponent } from '../error-max-length-field-form/error-max-length-field-form.component';
+import { ErrorRequiredFieldFormComponent } from '../error-required-field-form/error-required-field-form.component';
 
 
 
@@ -13,7 +14,8 @@ import { ErrorMaxLengthFieldFormComponent } from '../error-max-length-field-form
     AddTaskFormComponent,
     MainAddTaskFormComponent,
     ErrorMinLengthFieldFormComponent,
-    ErrorMaxLengthFieldFormComponent
+    ErrorMaxLengthFieldFormComponent,
+    ErrorRequiredFieldFormComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { ErrorMaxLengthFieldFormComponent } from '../error-max-length-field-form
     AddTaskFormComponent,
     MainAddTaskFormComponent,
     ErrorMinLengthFieldFormComponent,
-    ErrorMaxLengthFieldFormComponent
+    ErrorMaxLengthFieldFormComponent,
+    ErrorRequiredFieldFormComponent
   ]
 })
 export class AddTaskFormModule { }
