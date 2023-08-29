@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Status, Task } from '../model/task';
-import { CRUDTaskListServiceService } from 'src/app/crudtask-list-service.service';
-import { ByStatutTaskListServiceService } from 'src/app/by-statut-task-list-service.service';
+import { TaskRepositoryService } from 'src/app/task-repository.service';
 
 @Component({
   selector: 'app-task-list',
@@ -12,10 +11,9 @@ export class TaskListComponent {
   taskList: Task[];
   archivedTaskList: Task[] = [];
   constructor(
-    private taskListService: CRUDTaskListServiceService, 
-    private archivedTaskListService: ByStatutTaskListServiceService	
+    private taskRepositoryService: TaskRepositoryService,
     ) {
-    this.taskList = taskListService.getTaskList();
-    this.archivedTaskList = archivedTaskListService.getTaskListByStatut(Status.TERMINEE);
+    this.taskList = taskRepositoryService.getTasks();
+    this.archivedTaskList = taskRepositoryService.getTasks(Status.TERMINEE);
   }
 }

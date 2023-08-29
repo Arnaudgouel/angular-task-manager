@@ -1,4 +1,4 @@
-import { CRUDTaskListServiceInterface } from './crudtask-list-interface.service copy';
+import { CRUDTaskListServiceInterface } from './crudtask-list-interface.service';
 import { Task } from './tasks/model/task';
 
 

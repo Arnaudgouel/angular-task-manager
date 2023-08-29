@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { CRUDTaskListServiceService } from './crudtask-list-service.service';
-import { ByStatutTaskListServiceInterface } from './by-statut-task-list-interface.service copy';
+import { CRUDTaskListService } from './crudtask-list-service.service';
+import { ByStatutTaskListServiceInterface } from './by-statut-task-list-interface.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ByStatutTaskListServiceService extends CRUDTaskListServiceService implements ByStatutTaskListServiceInterface {
+export class ByStatutTaskListService extends CRUDTaskListService implements ByStatutTaskListServiceInterface {
 
   constructor() {
     super();

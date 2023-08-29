@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Task } from './tasks/model/task';
 import { TaskList } from './tasks/model/TaskList';
-import { CRUDTaskListServiceInterface } from './crudtask-list-interface.service copy';
+import { CRUDTaskListServiceInterface } from './crudtask-list-interface.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CRUDTaskListServiceService implements CRUDTaskListServiceInterface {
+export class CRUDTaskListService implements CRUDTaskListServiceInterface {
 
   tasks: Task[] = new TaskList().tasks;
 
